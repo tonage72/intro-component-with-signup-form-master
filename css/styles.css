@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--color-red: hsl(0, 100%, 74%);
+	--color-green: hsl(154, 59%, 51%);
+	--color-blue: hsl(248, 32%, 49%);
+	--color-dark-blue: hsl(249, 10%, 26%);
+	--grayish-blue: hsl(246, 25%, 77%);
+}
+
+html {
+	font-family: "Poppins", sans-serif;
+	font-size: 16px;
+}
+
+body {
+	height: 100vh;
+	background-color: var(--color-red);
+	background-image: url("../images/bg-intro-mobile.png");
+}
+
+.main-grid {
+	display: grid;
+	grid-template-rows: auto auto;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.first-part {
+	container-type: inline-size;
+} 
+
+.second-part {
+	container-type: inline-size;
+}
+
+.second-part div:first-child {
+	background-color: var(--color-blue);
+}
+
+form {
+	background-color: white;
+}
+
+input {
+	display: block;
+}
+
+.second-part .button-claim {
+	background-color: white;
+}
+
+/* By clicking ... */
+.second-part div:nth-child(4) {
+	background-color: white;
+}
+
+.attribution {
+	margin-top: 1rem;
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
