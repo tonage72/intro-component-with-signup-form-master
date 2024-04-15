@@ -14,6 +14,8 @@
 	--color-blue: hsl(248, 32%, 49%);
 	--color-dark-blue: hsl(249, 10%, 26%);
 	--grayish-blue: hsl(246, 25%, 77%);
+
+	--shadow: 0 2cqi 0 hsla(0, 0%, 0%, .2);
 }
 
 html {
@@ -21,10 +23,17 @@ html {
 	font-size: 16px;
 }
 
+a {
+	text-decoration: none;
+	color: var(--color-red);
+}
+
 body {
-	height: 100vh;
+	height: 100svh;
 	background-color: var(--color-red);
 	background-image: url("../images/bg-intro-mobile.png");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .main-grid {
@@ -35,32 +44,92 @@ body {
 }
 
 .first-part {
+	display: flex;
+	flex-flow: column nowrap;
+	text-align: center;
 	container-type: inline-size;
-} 
+}
+
+/* Learn to code ... */
+.first-part p:first-child {
+	font-size: 8cqi;
+	font-weight: 600;
+	color: white;
+}
+
+/* See how ... */
+.first-part p:nth-child(2) {
+	color: white;
+	font-size: 5cqi;
+}
 
 .second-part {
 	container-type: inline-size;
+	text-align: center;
 }
 
+/* Try it free ... */
 .second-part div:first-child {
 	background-color: var(--color-blue);
+	margin: 10cqi 0 6cqi 0;
+	font-size: 5cqi;
+	color: white;
+	padding: 6cqi 15cqi;
+	border-radius: .5rem;
+	box-shadow: var(--shadow);
+}
+
+.second-part div:first-child span {
+	font-weight: 600;
 }
 
 form {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+	gap: 3cqi;
+	padding: 5cqi 0;
 	background-color: white;
+	border-radius: 1rem 1rem 0 0;
 }
 
 input {
+	width: 85cqi;
 	display: block;
+	height: 15cqi;
+	border-radius: .5rem;
+	border: 1px solid var(--grayish-blue);
 }
 
-.second-part .button-claim {
+/* wrapper for claim button */
+.second-part .button-claim-div {
 	background-color: white;
+	width: 100%;
+}
+
+/* Actual claim button */
+.second-part .button-claim {
+	display: grid;
+	align-items: center;
+	background-color: var(--color-green);
+	width: 85cqi;
+	height: 18cqi;
+	border-radius: .5rem;
+	margin: 0 auto;
+	color: white;
+	font-size: 5cqi;
 }
 
 /* By clicking ... */
 .second-part div:nth-child(4) {
+	color: var(--grayish-blue);
+	font-size: 3cqi;
+	font-weight: 500;
 	background-color: white;
+	padding: 3cqi 16cqi 8cqi 16cqi;
+	border-radius: 0 0 1rem 1rem;
+	line-height: 6cqi;
+	box-shadow: var(--shadow);
 }
 
 .attribution {
