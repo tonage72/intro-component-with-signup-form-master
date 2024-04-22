@@ -99,6 +99,8 @@ input {
 	height: 15cqi;
 	border-radius: .5rem;
 	border: 1px solid var(--grayish-blue);
+	padding-left: 5cqi;
+	font-weight: 700;
 }
 
 /* wrapper for claim button */
@@ -118,6 +120,7 @@ input {
 	margin: 0 auto;
 	color: white;
 	font-size: 5cqi;
+	cursor: pointer;
 }
 
 /* By clicking ... */
