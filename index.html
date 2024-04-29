@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="javascript/script.js"></script>
+  <script src="javascript/script.js" defer></script>
   <link rel="stylesheet" href="css/styles.css">
   <title>Frontend Mentor | Intro component with sign up form</title>
 </head>
@@ -25,28 +25,42 @@
           <span>Try it free 7 days</span> then $20/mo. thereafter
         </p>
       </div>
-      <form action="" method="get" class="form">
-        <input
-          type="text"
-          name="input-first-name"
-          class="input-first-name"
-          placeholder="First Name">
-        <input
-          type="text"
-          name="input-last-name"
-          class="input-last-name"
-          placeholder="Last Name">
-        <input
-          type="text"
-          name="input-email"
-          class="input-email"
-          placeholder="Email Address">
-        <input
-          type="text"
-          name="input-password"
-          class="input-password"
-          placeholder="Password">
+
+      <form>
+        <div class="input-frame">
+          <input
+            type="text"
+            name="input-first-name"
+            placeholder="First Name">
+          <small>Error Message</small>
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <div class="input-frame">
+          <input
+            type="text"
+            name="input-last-name"
+            placeholder="Last Name">
+          <small>Error Message</small>
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <div class="input-frame">
+          <input
+            type="text"
+            name="input-email"
+            placeholder="Email Address">
+          <small>Error Message</small>
+          <img src="images/icon-error.svg" alt="">
+        </div>
+        <div class="input-frame">
+          <input
+            type="text"
+            name="input-password"
+            placeholder="Password">
+          <small>Error Message</small>
+          <img src="images/icon-error.svg" alt="">
+        </div>
       </form>
+
       <div class="button-claim-div">
         <p class="button-claim">
           CLAIM YOUR FREE TRIAL

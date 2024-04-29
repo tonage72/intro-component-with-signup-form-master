@@ -18,6 +18,11 @@
 	--shadow: 0 2cqi 0 hsla(0, 0%, 0%, .2);
 }
 
+img {
+	width: 100%;
+	display: block;
+}
+
 html {
 	font-family: "Poppins", sans-serif;
 	font-size: 16px;
@@ -69,7 +74,7 @@ body {
 }
 
 /* Try it free ... */
-.second-part div:first-child {
+.second-part > div:first-child {
 	background-color: var(--color-blue);
 	margin: 10cqi 0 6cqi 0;
 	font-size: 5cqi;
@@ -79,7 +84,7 @@ body {
 	box-shadow: var(--shadow);
 }
 
-.second-part div:first-child span {
+.second-part > div:first-child span {
 	font-weight: 600;
 }
 
@@ -93,14 +98,39 @@ form {
 	border-radius: 1rem 1rem 0 0;
 }
 
-input {
+.input-frame {
+	position: relative;
 	width: 85cqi;
+}
+
+.input-frame img {
+	position: absolute;
+	width: 8cqi;
+	right: 5cqi;
+	top: 3cqi;
+}
+
+input {
+	width: 100%;
 	display: block;
 	height: 15cqi;
 	border-radius: .5rem;
 	border: 1px solid var(--grayish-blue);
 	padding-left: 5cqi;
 	font-weight: 700;
+}
+
+input::placeholder {
+	font-size: 4cqi;
+}
+
+form .input-frame small {
+	display: block;
+	font-size: 3cqi;
+	visibility: hidden;
+	width: 100%;
+	text-align: right;
+	color: red;
 }
 
 /* wrapper for claim button */
@@ -124,7 +154,7 @@ input {
 }
 
 /* By clicking ... */
-.second-part div:nth-child(4) {
+.second-part > div:nth-child(4) {
 	color: var(--grayish-blue);
 	font-size: 3cqi;
 	font-weight: 500;
