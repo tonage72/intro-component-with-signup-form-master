@@ -108,6 +108,15 @@ form {
 	width: 8cqi;
 	right: 5cqi;
 	top: 3cqi;
+	visibility: hidden;
+}
+
+.input-frame.error small {
+	visibility: visible;
+}
+
+.input-frame.error img {
+	visibility: visible;
 }
 
 input {
@@ -124,6 +133,7 @@ input::placeholder {
 	font-size: 4cqi;
 }
 
+/* <small> is the error message field */
 form .input-frame small {
 	display: block;
 	font-size: 3cqi;
