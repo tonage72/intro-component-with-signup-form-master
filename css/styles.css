@@ -119,6 +119,14 @@ form {
 	visibility: visible;
 }
 
+.input-frame.error input {
+	border-color: red;
+}
+
+.input-frame.success input {
+	background-color: orange;
+}
+
 input {
 	width: 100%;
 	display: block;

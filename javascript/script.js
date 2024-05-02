@@ -16,24 +16,37 @@ function validateInputs() {
 
 	if(inputFirstNameValue === '') {
 		displayError(inputFirstName, 'First name can\'t be blank.')
+	} else {
+		displaySuccess(inputFirstName);
 	}
 
 	if(inputLastNameValue === '') {
 		displayError(inputLastName, 'Last name can\'t be blank.')
+	} else {
+		displaySuccess(inputLastName);
 	}
 
 	if(inputEmailValue === '') {
 		displayError(inputEmail, 'Email can\'t be blank.')
+	} else {
+		displaySuccess(inputEmail);
 	}
 
 	if(inputPasswordValue === '') {
 		displayError(inputPassword, 'Password can\'t be blank.')
+	} else {
+		displaySuccess(inputPassword);
 	}
 }
 
-function displayError(input, message) {
-	const inputFrame = input.parentElement;
+function displayError(field, message) {
+	const inputFrame = field.parentElement;
 	const small = inputFrame.querySelector('small');
-	inputFrame.className = 'input-frame error'
+	inputFrame.className = 'input-frame error';
 	small.innerText = message;
+}
+
+function displaySuccess(field) {
+	const inputFrame = field.parentElement;
+	inputFrame.className = 'input-frame success';
 }
