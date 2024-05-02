@@ -28,6 +28,8 @@ function validateInputs() {
 
 	if(inputEmailValue === '') {
 		displayError(inputEmail, 'Email can\'t be blank.')
+	} else if (!isEmail(inputEmailValue)) {
+		displayError(inputEmail, 'Not a valid email.')
 	} else {
 		displaySuccess(inputEmail);
 	}
@@ -49,4 +51,8 @@ function displayError(field, message) {
 function displaySuccess(field) {
 	const inputFrame = field.parentElement;
 	inputFrame.className = 'input-frame success';
+}
+
+function isEmail(email) {
+	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
