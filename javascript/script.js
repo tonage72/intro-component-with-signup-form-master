@@ -3,9 +3,13 @@ const inputLastName = document.getElementsByName("input-last-name")[0];
 const inputEmail = document.getElementsByName("input-email")[0];
 const inputPassword = document.getElementsByName("input-password")[0];
 const buttonClaim = document.querySelector(".button-claim");
+let wholeFormValid = true;
 
 buttonClaim.addEventListener('click', e => {
 	validateInputs();
+	if (wholeFormValid === true) {
+		location.reload();
+	}
 })
 
 function validateInputs() {
@@ -14,14 +18,18 @@ function validateInputs() {
 	const inputEmailValue = document.getElementsByName("input-email")[0].value.trim();
 	const inputPasswordValue = document.getElementsByName("input-password")[0].value.trim();
 
+	wholeFormValid = true;
+
 	if(inputFirstNameValue === '') {
 		displayError(inputFirstName, 'First name can\'t be blank.')
+		wholeFormValid = false;
 	} else {
 		displaySuccess(inputFirstName);
 	}
 
 	if(inputLastNameValue === '') {
 		displayError(inputLastName, 'Last name can\'t be blank.')
+		wholeFormValid = false;
 	} else {
 		displaySuccess(inputLastName);
 	}
@@ -30,12 +38,14 @@ function validateInputs() {
 		displayError(inputEmail, 'Email can\'t be blank.')
 	} else if (!isEmail(inputEmailValue)) {
 		displayError(inputEmail, 'Not a valid email.')
+		wholeFormValid = false;
 	} else {
 		displaySuccess(inputEmail);
 	}
 
 	if(inputPasswordValue === '') {
 		displayError(inputPassword, 'Password can\'t be blank.')
+		wholeFormValid = false;
 	} else {
 		displaySuccess(inputPassword);
 	}

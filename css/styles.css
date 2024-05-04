@@ -45,6 +45,7 @@ body {
 	display: grid;
 	grid-template-rows: auto auto;
 	width: 90%;
+	max-width: 650px;
 	margin: 0 auto;
 }
 
@@ -75,11 +76,14 @@ body {
 
 /* Try it free ... */
 .second-part > div:first-child {
+
+	--font-size: clamp(1px, 5cqi, 18px);
+
 	background-color: var(--color-blue);
-	margin: 10cqi 0 6cqi 0;
-	font-size: 5cqi;
+	margin: 10cqi auto 6cqi auto;
+	font-size: var(--font-size);
 	color: white;
-	padding: 6cqi 15cqi;
+	padding: 6cqi 12cqi;
 	border-radius: .5rem;
 	box-shadow: var(--shadow);
 }
@@ -123,10 +127,6 @@ form {
 	border-color: red;
 }
 
-.input-frame.success input {
-	background-color: orange;
-}
-
 input {
 	width: 100%;
 	display: block;
@@ -135,9 +135,6 @@ input {
 	border: 1px solid var(--grayish-blue);
 	padding-left: 5cqi;
 	font-weight: 700;
-}
-
-input::placeholder {
 	font-size: 4cqi;
 }
 
@@ -181,6 +178,78 @@ form .input-frame small {
 	border-radius: 0 0 1rem 1rem;
 	line-height: 6cqi;
 	box-shadow: var(--shadow);
+}
+
+@media (width >= 980px) {
+
+	body {
+		background-image: url("../images/bg-intro-desktop.png");
+	}
+
+	.main-grid {
+		grid-template-rows: auto;
+		grid-template-columns: 1fr 1fr;
+		align-items: center;
+		max-width: 1400px;
+	}
+
+	/* Try it free ... */
+	.second-part > div:first-child {
+		padding: 3cqi 3cqi;
+	}
+	
+	.first-part {
+		text-align: left;
+	}
+
+	.input-frame {
+		margin-bottom: 2cqi;
+	}
+
+	/* Learn to code ... */
+	.first-part > p:first-child {
+		line-height: 8cqi;
+		margin-bottom: 3cqi;
+	}
+
+	/* See how experienced ... */
+	.first-part > p:nth-child(2) {
+		line-height: 4.5cqi;
+		font-size: 3cqi;
+	}
+
+	input {
+		height: 10cqi;
+		font-size: 3cqi;
+	}
+
+	form {
+		gap: 1cqi;
+	}
+
+	/* Actual claim button */
+	.second-part .button-claim {
+		height: 10cqi;
+		font-size: 3.5cqi;
+	}
+
+	/* By clicking ... */
+	.second-part > div:nth-child(4) {
+		font-size: 2cqi;
+		padding: 1cqi 16cqi 6cqi 16cqi;
+	}
+
+	/* <small> is the error message field */
+	form .input-frame small {
+		font-size: 2cqi;
+	}
+
+	.input-frame img {
+		width: 6cqi;
+		right: 3cqi;
+		top: 2cqi;
+	}
+	
 }
 
 .attribution {
